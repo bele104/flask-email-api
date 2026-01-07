@@ -91,13 +91,15 @@ def disparar_email():
 
     # Gera HTML final com os dados atuais
     html = integrarEmail(email_template)
-    """
+    
     # Envia o e-mail
-    enviar_email("Contatos", html)"""
+    enviar_email("Contatos", html)
 
 
+    """
     # Envia o e-mail para teste
-    enviar_email("teste", html)
+    enviar_email("teste", html)"""
+
     # Limpa a lista após envio
     JSON.clear()
 

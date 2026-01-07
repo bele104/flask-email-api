@@ -12,7 +12,7 @@ Permite gerenciar listas de destinatários e templates HTML de forma dinâmica, 
 - Endpoint dedicado para disparo de e-mails.
 - Suporte a múltiplos destinatários agrupados por áreas.
 - Compatível com N8N para automação de workflows.
-- Previne envio duplicado e controla fluxo de e-mails.
+
 
 ---
 

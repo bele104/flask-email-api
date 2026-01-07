@@ -51,7 +51,7 @@ def enviar_email(area, html):
 
     payload = {
         "message": {
-            "subject": f"Tarefas da Área: {area}",
+            "subject": "NDAs Prestes a Vencer",
             "body": {
                 "contentType": "HTML",
                 "content": html

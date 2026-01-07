@@ -1,18 +1,41 @@
-# 1. Escolher a imagem base do Python
+# ===============================
+# Imagem base do Python
+# ===============================
 FROM python:3.11-slim
 
-# 2. Criar pasta de trabalho dentro do container
+# ===============================
+# Variáveis de ambiente
+# ===============================
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# ===============================
+# Diretório de trabalho
+# ===============================
 WORKDIR /app
 
-# 3. Copiar os arquivos da API para dentro do container
+# ===============================
+# Copiar dependências primeiro
+# (melhora cache do Docker)
+# ===============================
 COPY requirements.txt .
-COPY app.py .
 
-# 4. Instalar as dependências
+# ===============================
+# Instalar dependências
+# ===============================
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 5. Expor a porta que a API vai usar
+# ===============================
+# Copiar o restante do projeto
+# ===============================
+COPY . .
+
+# ===============================
+# Expor a porta da API
+# ===============================
 EXPOSE 5000
 
-# 6. Comando para rodar a API
+# ===============================
+# Comando de execução
+# ===============================
 CMD ["python", "app.py"]
