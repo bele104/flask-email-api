@@ -16,5 +16,4 @@ Permite gerenciar listas de destinatários e templates HTML de forma dinâmica, 
 
 ---
 
-## 📂 Estrutura do Projeto
 
