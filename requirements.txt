@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+flask
+python-dotenv
+requests
+msal
